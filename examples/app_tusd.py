@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse, JSONResponse, Response
+from fastapi_tusd import TusRouter
 
 app = FastAPI()
+
+app.include_router(TusRouter(store_dir="./files"))
 
 # fmt: off
 html_content = """

@@ -65,10 +65,12 @@ twine upload dist/*
 
 ## Getting started
 
-Usage:
-uvicorn app_tusd:app --reload
-
-Description:
 A file resumable upload server implemented by FastAPI comply with the `tus` resumable upload protocol
+
+Usage:
+
+```sh
+uvicorn app_tusd:app --reload
+```
 
 [GitHub - tus/tus-resumable-upload-protocol: Open Protocol for Resumable File Uploads](https://github.com/tus/tus-resumable-upload-protocol)
