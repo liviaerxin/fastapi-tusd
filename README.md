@@ -17,9 +17,11 @@ app.include_router(TusRouter(store_dir="./files", prefix="/files"))
 
 Then the tus upload endpoints will be served at `http://127.0.0.1:8000/files`, more information is available at `http://127.0.0.1:8000/docs`
 
-### Example with Tus Client
+### Examples
 
-A simple example with web client using `uppy` to support for `Tus` protocol, under the `example/` folder
+There a simple example with web file upload client supporting for `Tus` protocol, thanks to `Uppy`!
+
+Enter the `example/` folder, run(`pip install uvicorn` if no `uvicorn`!)
 
 ```sh
 uvicorn app_tusd:app --reload
