@@ -4,7 +4,7 @@ from fastapi_tusd import TusRouter
 
 app = FastAPI()
 
-app.include_router(TusRouter(store_dir="./files"))
+app.include_router(TusRouter(store_dir="./files", location="/files"), prefix="/files")
 
 # fmt: off
 html_content = """
@@ -36,9 +36,11 @@ html_content = """
 """
 # fmt: on
 
+
 @app.get("/")
 async def home():
     return {"message": "Hello World"}
+
 
 @app.get("/upload.html")
 async def read_uppy():

@@ -26,18 +26,18 @@ class TusRouter(APIRouter):
         self,
         store_dir: str,
         max_size: int = 128849018880,
-        prefix: str = "/files",
+        location: str = "http://127.0.0.1:8000/files",
         *args,
         **kwargs,
     ):
-        super().__init__(prefix=prefix, *args, **kwargs)
+        super().__init__(*args, **kwargs)
 
         self.store_dir = store_dir
         self.max_size = max_size
         # TODO: support s3
         self.datastore = FileStore(path=store_dir)
 
-        self.location = self.prefix
+        self.location = location
 
         self.add_core_routes()
 

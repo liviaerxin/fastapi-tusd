@@ -12,7 +12,7 @@ from fastapi_tusd import TusRouter
 
 app = FastAPI()
 
-app.include_router(TusRouter(store_dir="./files", prefix="/files"))
+app.include_router(TusRouter(store_dir="./files", location="/files"), prefix="/files")
 ```
 
 Then the tus upload endpoints will be served at `http://127.0.0.1:8000/files`, more information is available at `http://127.0.0.1:8000/docs`
