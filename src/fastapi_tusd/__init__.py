@@ -1,3 +1,3 @@
-__version__ = "0.100.1.post0"
+__version__ = "0.100.2"
 
 from .tusd import TusRouter
