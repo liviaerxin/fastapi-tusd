@@ -36,7 +36,7 @@ Then the tus upload endpoints will be served at `http://127.0.0.1:8000/files`, m
 
 There is a simple example with a web file upload client supporting for `Tus` protocol, thanks to `Uppy`!
 
-Enter the `example/` folder, and run(`pip install `uvicorn` if no `uvicorn`!)
+Enter the `example/` folder, and run(`pip install uvicorn` if no `uvicorn`!)
 
 ```sh
 uvicorn app_tusd:app --reload
